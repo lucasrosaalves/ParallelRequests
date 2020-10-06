@@ -95,7 +95,6 @@ namespace ParallelRequests
             return response.IsSuccessStatusCode;
         }
 
-
         #region Create Request
 
         private static HttpRequestMessage CreateRequest()
@@ -111,9 +110,9 @@ namespace ParallelRequests
 
         private static void AddContent(HttpRequestMessage request)
         {
-            if (RequestParameters.Body != null)
+            if (!string.IsNullOrWhiteSpace(RequestParameters.Body))
             {
-                request.Content = new StringContent(RequestParameters.Body.ToString(), Encoding.UTF8, "application/json");
+                request.Content = new StringContent(RequestParameters.Body, Encoding.UTF8, "application/json");
             }
         }
 
