@@ -7,9 +7,13 @@
 
   <ItemGroup>
     <None Remove="body.json" />
+    <None Remove="user_uoms.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="user_uoms.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="body.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

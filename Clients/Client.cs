@@ -11,22 +11,24 @@ namespace ParallelRequests
 {
     public class Client : IClient
     {
-        private HttpClient _httpClient;
+        private readonly HttpClient _httpClient;
+        private readonly RequestParameters _parameters;
 
         public Client(HttpClient httpClient)
         {
             _httpClient = httpClient ??
                 throw new ArgumentException(nameof(httpClient));
+
+            _parameters = new RequestParameters();
         }
 
         public async Task Handle()
         {
             var results = new List<RequestResult>();
 
-            foreach (var users in RequestParameters.Users)
+            foreach (var users in _parameters.Users)
             {
-                var result = await Handle(users);
-
+                RequestResult result = await Handle(users);
                 results.Add(result);
                 Console.WriteLine(result.ToString());
             }
@@ -39,7 +41,7 @@ namespace ParallelRequests
             Console.WriteLine();
             Console.WriteLine();
 
-            Console.WriteLine(RequestParameters.Url);
+            Console.WriteLine(_parameters.Url);
             foreach (var result in results)
             {
                 Console.WriteLine(result.ToString());
@@ -81,25 +83,33 @@ namespace ParallelRequests
 
         private async Task<bool> SendAsync()
         {
-            var timer = new Stopwatch();
-            timer.Start();
+            try
+            {
+                var timer = new Stopwatch();
+                timer.Start();
 
-            HttpRequestMessage request = CreateRequest();
+                HttpRequestMessage request = CreateRequest();
 
-            var response = await _httpClient.SendAsync(request);
+                var response = await _httpClient.SendAsync(request);
 
-            timer.Stop();
+                timer.Stop();
 
-            Console.WriteLine($"{timer.Elapsed.TotalSeconds}s elapsed with response {response.StatusCode}");
+                Console.WriteLine($"{timer.Elapsed.TotalSeconds}s elapsed with response {response.StatusCode}");
 
-            return response.IsSuccessStatusCode;
+                return response.IsSuccessStatusCode;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
         }
 
         #region Create Request
 
-        private static HttpRequestMessage CreateRequest()
+        private HttpRequestMessage CreateRequest()
         {
-            var request = new HttpRequestMessage(RequestParameters.HttpMethod, RequestParameters.Url);
+            var request = new HttpRequestMessage(_parameters.HttpMethod, _parameters.Url);
 
             AddToken(request);
             AddHeaders(request);
@@ -108,27 +118,27 @@ namespace ParallelRequests
             return request;
         }
 
-        private static void AddContent(HttpRequestMessage request)
+        private void AddContent(HttpRequestMessage request)
         {
-            if (!string.IsNullOrWhiteSpace(RequestParameters.Body))
+            if (!string.IsNullOrWhiteSpace(_parameters.Body))
             {
-                request.Content = new StringContent(RequestParameters.Body, Encoding.UTF8, "application/json");
+                request.Content = new StringContent(_parameters.Body, Encoding.UTF8, "application/json");
             }
         }
 
-        private static void AddToken(HttpRequestMessage request)
+        private void AddToken(HttpRequestMessage request)
         {
-            if (!string.IsNullOrWhiteSpace(RequestParameters.Token))
+            if (!string.IsNullOrWhiteSpace(_parameters.Token))
             {
-                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", RequestParameters.Token);
+                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _parameters.Token);
             }
         }
 
-        private static void AddHeaders(HttpRequestMessage request)
+        private void AddHeaders(HttpRequestMessage request)
         {
-            if (RequestParameters.Headers != null)
+            if (_parameters.Headers != null)
             {
-                foreach (var header in RequestParameters.Headers)
+                foreach (var header in _parameters.Headers)
                 {
                     request.Headers.Add(header.Key, header.Value);
                 }

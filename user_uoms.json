@@ -1,0 +1,179 @@
+[
+  {
+    "uomTypeId": "63079d4f-4687-4841-8987-2cc2a880b8ff",
+    "uomType": "Concentration",
+    "uomPreferred": "pg/mL",
+    "uomsRelated": [
+      "pg/mL",
+      "ppb",
+      "ppm",
+      "ptb"
+    ]
+  },
+  {
+    "uomTypeId": "f431a208-3bf4-4575-9cbe-9d7b1e4edb1d",
+    "uomType": "Conductivity",
+    "uomPreferred": "µS/cm",
+    "uomsRelated": [
+      "µS/cm"
+    ]
+  },
+  {
+    "uomTypeId": "7365699b-3b55-4218-afc9-33cc03e74c27",
+    "uomType": "Corrosion Rate",
+    "uomPreferred": "mpy",
+    "uomsRelated": [
+      "mmpy",
+      "mpy"
+    ]
+  },
+  {
+    "uomTypeId": "6fe39a70-15b9-4523-a71f-5ab97e5e802e",
+    "uomType": "Electrical",
+    "uomPreferred": "V",
+    "uomsRelated": [
+      "mV",
+      "V"
+    ]
+  },
+  {
+    "uomTypeId": "bf99766d-821f-4277-be3b-69ea1c01c23c",
+    "uomType": "Gas Flow Rate",
+    "uomPreferred": "MMSCFD",
+    "uomsRelated": [
+      "e3m3/d",
+      "MCFD",
+      "MMSCFD"
+    ]
+  },
+  {
+    "uomTypeId": "5209a8fc-c1c6-47cc-9c82-1fdef3be4469",
+    "uomType": "Injection Rate",
+    "uomPreferred": "QPD",
+    "uomsRelated": [
+      "GPD",
+      "LPD",
+      "QPD"
+    ]
+  },
+  {
+    "uomTypeId": "f98e56ba-6ee8-49e6-9dbe-c0890657720d",
+    "uomType": "Length",
+    "uomPreferred": "cm",
+    "uomsRelated": [
+      "cm",
+      "ft",
+      "In",
+      "km",
+      "m",
+      "mil",
+      "mm"
+    ]
+  },
+  {
+    "uomTypeId": "073d103e-01a1-49f2-a830-0cdbfe428440",
+    "uomType": "Mass Rate",
+    "uomPreferred": "mg/L",
+    "uomsRelated": [
+      "mg/L"
+    ]
+  },
+  {
+    "uomTypeId": "0020340e-4962-4dd7-b8ce-26447f714c4d",
+    "uomType": "Percentage",
+    "uomPreferred": "%",
+    "uomsRelated": [
+      "%"
+    ]
+  },
+  {
+    "uomTypeId": "76a5382d-3f44-485e-b484-760c7ef284a2",
+    "uomType": "Percentage Composition",
+    "uomPreferred": "% Composition",
+    "uomsRelated": [
+      "% Composition"
+    ]
+  },
+  {
+    "uomTypeId": "433b3d6d-fa72-4d9b-ab5d-9ac66f77b771",
+    "uomType": "Percentage Mole",
+    "uomPreferred": "% mole",
+    "uomsRelated": [
+      "% mole"
+    ]
+  },
+  {
+    "uomTypeId": "719ae9ab-f1aa-4f18-856b-28031b80ac64",
+    "uomType": "pH",
+    "uomPreferred": "pH",
+    "uomsRelated": [
+      "pH"
+    ]
+  },
+  {
+    "uomTypeId": "6a5d020c-45ce-420b-a3d7-2fda7274ffd3",
+    "uomType": "Pressure",
+    "uomPreferred": "psig",
+    "uomsRelated": [
+      "bar",
+      "barg",
+      "kPa",
+      "psi",
+      "psig"
+    ]
+  },
+  {
+    "uomTypeId": "67583981-e67e-4d92-b2cd-c530531a9e5f",
+    "uomType": "Temperature",
+    "uomPreferred": "K",
+    "uomsRelated": [
+      "C",
+      "F",
+      "K"
+    ]
+  },
+  {
+    "uomTypeId": "3e9a52b0-f8cc-4d26-b253-fe668762df0d",
+    "uomType": "Turbidity",
+    "uomPreferred": "NTU",
+    "uomsRelated": [
+      "NTU"
+    ]
+  },
+  {
+    "uomTypeId": "0845533d-44ab-4b3c-a64f-91c4ad46e7d6",
+    "uomType": "Velocity",
+    "uomPreferred": "m/s",
+    "uomsRelated": [
+      "ft/s",
+      "m/s"
+    ]
+  },
+  {
+    "uomTypeId": "e5f7c6af-8d80-42ad-a9e3-e73b4cc424eb",
+    "uomType": "Viscosity",
+    "uomPreferred": "cSt",
+    "uomsRelated": [
+      "cps",
+      "cSt"
+    ]
+  },
+  {
+    "uomTypeId": "aac40f66-dec8-449e-863e-58db0c5e69a3",
+    "uomType": "Volume",
+    "uomPreferred": "GAL",
+    "uomsRelated": [
+      "GAL",
+      "L"
+    ]
+  },
+  {
+    "uomTypeId": "5301c07c-110b-4aa4-bc00-5334e1927cd8",
+    "uomType": "Volume Rate",
+    "uomPreferred": "BBL/Day",
+    "uomsRelated": [
+      "BBL/Day",
+      "m3/d"
+    ]
+  }
+]

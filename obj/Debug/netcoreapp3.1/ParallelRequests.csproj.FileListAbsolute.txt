@@ -24,3 +24,4 @@ C:\Projetos\Pessoal\ParallelRequests\bin\Debug\netcoreapp3.1\Microsoft.Extension
 C:\Projetos\Pessoal\ParallelRequests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Projetos\Pessoal\ParallelRequests\obj\Debug\netcoreapp3.1\ParallelRequests.csproj.CoreCompileInputs.cache
 C:\Projetos\Pessoal\ParallelRequests\bin\Debug\netcoreapp3.1\body.json
+C:\Projetos\Pessoal\ParallelRequests\bin\Debug\netcoreapp3.1\user_uoms.json

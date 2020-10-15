@@ -1,1 +1,11 @@
-[ "cmaa" ]
+{
+  "CustomerSite": "f4337c75-6729-4b6a-9cb6-560b2c48d4c1",
+  "startDate": "2020-04-01",
+  "endDate": "2020-06-01",
+  "UnitType": "QPD",
+  "TankId": "42acfa1b-0cb6-4328-9f15-6cf655b7ce19",
+  "Search": "",
+  "page": 1,
+  "pageSize": 50,
+  "filters":  []
+}
